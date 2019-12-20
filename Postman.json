@@ -1,0 +1,801 @@
+{
+	"info": {
+		"_postman_id": "18636a5e-38e6-431c-b739-0b992ebc7f2c",
+		"name": "PolicyAnd.Me Rest Documentation",
+		"description": "An API that allows users to query policy data, created by SWE team 20",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get bills",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "5b2ea63f-5e0d-4b85-adc0-fc5785801f08",
+						"exec": [
+							"pm.test(\"Response ok and has JSON Body\", function () {",
+							"     pm.response.to.be.ok;",
+							"     pm.response.to.be.withBody;",
+							"     pm.response.to.be.json;",
+							"});",
+							"",
+							"tests[\"Successful response code 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Content-Type is JSON\"] = postman.getResponseHeader(\"Content-Type\") === \"application/json\";",
+							"",
+							"tests[\"Response less than 1s\"] = responseTime < 2000;",
+							"",
+							"var len = pm.response.json().length;",
+							"",
+							"if(len > 0){",
+							"    tests[\"Response has congress\"] = responseBody.has(\"congress\");",
+							"    tests[\"Response has bill_id\"] = responseBody.has(\"bill_id\");",
+							"    tests[\"Response has number\"] = responseBody.has(\"number\");",
+							"    tests[\"Response has title\"] = responseBody.has(\"title\");",
+							"    tests[\"Response has short_title\"] = responseBody.has(\"short_title\");",
+							"    tests[\"Response has primary_subject\"] = responseBody.has(\"primary_subject\");",
+							"    tests[\"Response has summary\"] = responseBody.has(\"summary\");",
+							"    tests[\"Response has summary_short\"] = responseBody.has(\"summary_short\");",
+							"    tests[\"Response has sponsor_id\"] = responseBody.has(\"sponsor_id\");",
+							"    tests[\"Response has cosponsors\"] = responseBody.has(\"cosponsors\");",
+							"    tests[\"Response has sponsor_party\"] = responseBody.has(\"sponsor_party\");",
+							"    tests[\"Response has sponsor_state\"] = responseBody.has(\"sponsor_state\");",
+							"    tests[\"Response has introduced_date\"] = responseBody.has(\"introduced_date\");",
+							"    tests[\"Response has committees\"] = responseBody.has(\"committees\");",
+							"    tests[\"Response has latest_major_action\"] = responseBody.has(\"latest_major_action\");",
+							"    tests[\"Response has latest_major_action_date\"] = responseBody.has(\"latest_major_action_date\");",
+							"}",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/bills?limit=1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"bills"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "1"
+						}
+					]
+				},
+				"description": "Obtain information about Bills from database with optional queries"
+			},
+			"response": [
+				{
+					"name": "Successful response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/bills?limit=<integer>&bill_id=<string>&sponsor_name=<string>&sponsor_id=<string>&sponsor_party=<string>&sponsor_state=<string>&introduced_date=<string>&primary_subject=<string>&committees=<string>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"bills"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "<integer>"
+								},
+								{
+									"key": "bill_id",
+									"value": "<string>"
+								},
+								{
+									"key": "sponsor_name",
+									"value": "<string>"
+								},
+								{
+									"key": "sponsor_id",
+									"value": "<string>"
+								},
+								{
+									"key": "sponsor_party",
+									"value": "<string>"
+								},
+								{
+									"key": "sponsor_state",
+									"value": "<string>"
+								},
+								{
+									"key": "introduced_date",
+									"value": "<string>"
+								},
+								{
+									"key": "primary_subject",
+									"value": "<string>"
+								},
+								{
+									"key": "committees",
+									"value": "<string>"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "[\n {\n  \"congress\": \"<string>\",\n  \"number\": \"<string>\",\n  \"bill_id\": \"<string>\",\n  \"title\": \"<string>\",\n  \"short_title\": \"<string>\",\n  \"primary_subject\": \"<string>\",\n  \"summary\": \"<string>\",\n  \"summary_short\": \"<string>\",\n  \"sponsor_id\": \"<string>\",\n  \"cosponsors\": \"<number>\",\n  \"sponsor_party\": \"<string>\",\n  \"sponsor_state\": \"<string>\",\n  \"introduced_date\": \"<string>\",\n  \"committees\": \"<string>\",\n  \"latest_major_action\": \"<string>\",\n  \"latest_major_action_date\": \"<string>\"\n },\n {\n  \"congress\": \"<string>\",\n  \"number\": \"<string>\",\n  \"bill_id\": \"<string>\",\n  \"title\": \"<string>\",\n  \"short_title\": \"<string>\",\n  \"primary_subject\": \"<string>\",\n  \"summary\": \"<string>\",\n  \"summary_short\": \"<string>\",\n  \"sponsor_id\": \"<string>\",\n  \"cosponsors\": \"<number>\",\n  \"sponsor_party\": \"<string>\",\n  \"sponsor_state\": \"<string>\",\n  \"introduced_date\": \"<string>\",\n  \"committees\": \"<string>\",\n  \"latest_major_action\": \"<string>\",\n  \"latest_major_action_date\": \"<string>\"\n }\n]"
+				},
+				{
+					"name": "Response for not found",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/bills?limit=<integer>&bill_id=<string>&sponsor_name=<string>&sponsor_id=<string>&sponsor_party=<string>&sponsor_state=<string>&introduced_date=<string>&primary_subject=<string>&committees=<string>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"bills"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "<integer>"
+								},
+								{
+									"key": "bill_id",
+									"value": "<string>"
+								},
+								{
+									"key": "sponsor_name",
+									"value": "<string>"
+								},
+								{
+									"key": "sponsor_id",
+									"value": "<string>"
+								},
+								{
+									"key": "sponsor_party",
+									"value": "<string>"
+								},
+								{
+									"key": "sponsor_state",
+									"value": "<string>"
+								},
+								{
+									"key": "introduced_date",
+									"value": "<string>"
+								},
+								{
+									"key": "primary_subject",
+									"value": "<string>"
+								},
+								{
+									"key": "committees",
+									"value": "<string>"
+								}
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain"
+						}
+					],
+					"cookie": [],
+					"body": "<string>"
+				},
+				{
+					"name": "Improper request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/bills?limit=<integer>&bill_id=<string>&sponsor_name=<string>&sponsor_id=<string>&sponsor_party=<string>&sponsor_state=<string>&introduced_date=<string>&primary_subject=<string>&committees=<string>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"bills"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "<integer>"
+								},
+								{
+									"key": "bill_id",
+									"value": "<string>"
+								},
+								{
+									"key": "sponsor_name",
+									"value": "<string>"
+								},
+								{
+									"key": "sponsor_id",
+									"value": "<string>"
+								},
+								{
+									"key": "sponsor_party",
+									"value": "<string>"
+								},
+								{
+									"key": "sponsor_state",
+									"value": "<string>"
+								},
+								{
+									"key": "introduced_date",
+									"value": "<string>"
+								},
+								{
+									"key": "primary_subject",
+									"value": "<string>"
+								},
+								{
+									"key": "committees",
+									"value": "<string>"
+								}
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain"
+						}
+					],
+					"cookie": [],
+					"body": "<string>"
+				}
+			]
+		},
+		{
+			"name": "get legislators",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "30ac97e5-3d6e-425a-8bc9-6485c02c9010",
+						"exec": [
+							"pm.test(\"Response ok and has JSON Body\", function () {",
+							"     pm.response.to.be.ok;",
+							"     pm.response.to.be.withBody;",
+							"     pm.response.to.be.json;",
+							"});",
+							"",
+							"tests[\"Successful response code 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Content-Type is JSON\"] = postman.getResponseHeader(\"Content-Type\") === \"application/json\";",
+							"",
+							"tests[\"Response less than 1s\"] = responseTime < 2000;",
+							"",
+							"var len = pm.response.json().length;",
+							"",
+							"if(len > 0){",
+							"    tests[\"Response has date_of_birth\"] = responseBody.has(\"date_of_birth\");",
+							"    tests[\"Response has facebook_account\"] = responseBody.has(\"facebook_account\");",
+							"    tests[\"Response has first_name\"] = responseBody.has(\"first_name\");",
+							"    tests[\"Response has gender\"] = responseBody.has(\"gender\");",
+							"    tests[\"Response has id\"] = responseBody.has(\"id\");",
+							"    tests[\"Response has last_name\"] = responseBody.has(\"last_name\");",
+							"    tests[\"Response has middle_name\"] = responseBody.has(\"middle_name\");",
+							"    tests[\"Response has missed_votes_pct\"] = responseBody.has(\"missed_votes_pct\");",
+							"    tests[\"Response has party\"] = responseBody.has(\"party\");",
+							"    tests[\"Response has seniority\"] = responseBody.has(\"seniority\");",
+							"    tests[\"Response has state\"] = responseBody.has(\"state\");",
+							"    tests[\"Response has title\"] = responseBody.has(\"title\");",
+							"    tests[\"Response has twitter_account\"] = responseBody.has(\"twitter_account\");",
+							"    tests[\"Response has url\"] = responseBody.has(\"url\");",
+							"    tests[\"Response has votes_against_party_pct\"] = responseBody.has(\"votes_against_party_pct\");",
+							"    tests[\"Response has votes_with_party_pct\"] = responseBody.has(\"votes_with_party_pct\");",
+							"    tests[\"Response has votesmart_id\"] = responseBody.has(\"votesmart_id\");",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/legislators?limit=1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"legislators"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "1"
+						}
+					]
+				},
+				"description": "Obtain information about legislators from database with optional queries"
+			},
+			"response": [
+				{
+					"name": "Response for not found",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/legislators?limit=<integer>&title=<string>&first_name=<string>&last_name=<string>&gender=<string>&party=<string>&state=<string>&date_of_birth=<string>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"legislators"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "<integer>"
+								},
+								{
+									"key": "title",
+									"value": "<string>"
+								},
+								{
+									"key": "first_name",
+									"value": "<string>"
+								},
+								{
+									"key": "last_name",
+									"value": "<string>"
+								},
+								{
+									"key": "gender",
+									"value": "<string>"
+								},
+								{
+									"key": "party",
+									"value": "<string>"
+								},
+								{
+									"key": "state",
+									"value": "<string>"
+								},
+								{
+									"key": "date_of_birth",
+									"value": "<string>"
+								}
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain"
+						}
+					],
+					"cookie": [],
+					"body": "<string>"
+				},
+				{
+					"name": "Successful response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/legislators?limit=<integer>&title=<string>&first_name=<string>&last_name=<string>&gender=<string>&party=<string>&state=<string>&date_of_birth=<string>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"legislators"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "<integer>"
+								},
+								{
+									"key": "title",
+									"value": "<string>"
+								},
+								{
+									"key": "first_name",
+									"value": "<string>"
+								},
+								{
+									"key": "last_name",
+									"value": "<string>"
+								},
+								{
+									"key": "gender",
+									"value": "<string>"
+								},
+								{
+									"key": "party",
+									"value": "<string>"
+								},
+								{
+									"key": "state",
+									"value": "<string>"
+								},
+								{
+									"key": "date_of_birth",
+									"value": "<string>"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "[\n {\n  \"id\": \"<string>\",\n  \"title\": \"<string>\",\n  \"first_name\": \"<string>\",\n  \"middle_name\": \"<string>\",\n  \"last_name\": \"<string>\",\n  \"date_of_birth\": \"<string>\",\n  \"seniority\": \"<string>\",\n  \"party\": \"<string>\",\n  \"state\": \"<string>\",\n  \"photo\": \"<string>\",\n  \"gender\": \"<string>\",\n  \"twitter_account\": \"<string>\",\n  \"facebook_account\": \"<string>\",\n  \"youtube_account\": \"<string>\",\n  \"missed_votes_pct\": \"<string>\",\n  \"votes_with_party_pct\": \"<string>\",\n  \"votes_against_party_pct\": \"<string>\"\n },\n {\n  \"id\": \"<string>\",\n  \"title\": \"<string>\",\n  \"first_name\": \"<string>\",\n  \"middle_name\": \"<string>\",\n  \"last_name\": \"<string>\",\n  \"date_of_birth\": \"<string>\",\n  \"seniority\": \"<string>\",\n  \"party\": \"<string>\",\n  \"state\": \"<string>\",\n  \"photo\": \"<string>\",\n  \"gender\": \"<string>\",\n  \"twitter_account\": \"<string>\",\n  \"facebook_account\": \"<string>\",\n  \"youtube_account\": \"<string>\",\n  \"missed_votes_pct\": \"<string>\",\n  \"votes_with_party_pct\": \"<string>\",\n  \"votes_against_party_pct\": \"<string>\"\n }\n]"
+				},
+				{
+					"name": "Improper request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/legislators?limit=<integer>&title=<string>&first_name=<string>&last_name=<string>&gender=<string>&party=<string>&state=<string>&date_of_birth=<string>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"legislators"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "<integer>"
+								},
+								{
+									"key": "title",
+									"value": "<string>"
+								},
+								{
+									"key": "first_name",
+									"value": "<string>"
+								},
+								{
+									"key": "last_name",
+									"value": "<string>"
+								},
+								{
+									"key": "gender",
+									"value": "<string>"
+								},
+								{
+									"key": "party",
+									"value": "<string>"
+								},
+								{
+									"key": "state",
+									"value": "<string>"
+								},
+								{
+									"key": "date_of_birth",
+									"value": "<string>"
+								}
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain"
+						}
+					],
+					"cookie": [],
+					"body": "<string>"
+				}
+			]
+		},
+		{
+			"name": "get sigs",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "55c1e52c-6487-44fa-8739-6cd444ddfda1",
+						"exec": [
+							"pm.test(\"Response ok and has JSON Body\", function () {",
+							"     pm.response.to.be.ok;",
+							"     pm.response.to.be.withBody;",
+							"     pm.response.to.be.json;",
+							"});",
+							"",
+							"tests[\"Successful response code 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Content-Type is JSON\"] = postman.getResponseHeader(\"Content-Type\") === \"application/json\";",
+							"",
+							"tests[\"Response less than 1s\"] = responseTime < 2000;",
+							"",
+							"",
+							"var len = pm.response.json().length;",
+							"",
+							"if(len > 0){",
+							"    tests[\"Response has sigId\"] = responseBody.has(\"sigId\");",
+							"    tests[\"Response has name\"] = responseBody.has(\"name\");",
+							"    tests[\"Response has address\"] = responseBody.has(\"address\");",
+							"    tests[\"Response has description\"] = responseBody.has(\"description\");",
+							"    tests[\"Response has url\"] = responseBody.has(\"url\");",
+							"    tests[\"Response has phone1\"] = responseBody.has(\"phone1\");",
+							"    tests[\"Response has phone2\"] = responseBody.has(\"phone2\");",
+							"    tests[\"Response has email\"] = responseBody.has(\"email\");",
+							"    tests[\"Response has fax\"] = responseBody.has(\"fax\");",
+							"    tests[\"Response has zip\"] = responseBody.has(\"zip\");",
+							"}",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/sigs?limit=1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"sigs"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "1"
+						}
+					]
+				},
+				"description": "Obtain information about interest groups from database with optional queries"
+			},
+			"response": [
+				{
+					"name": "Response for not found",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/sigs?limit=<integer>&sigId=<string>&topic=<string>&endorsments=<numbe>&ratings=<boolean>&lobbying_spent=<number>&contributions=<number>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"sigs"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "<integer>"
+								},
+								{
+									"key": "sigId",
+									"value": "<string>"
+								},
+								{
+									"key": "topic",
+									"value": "<string>"
+								},
+								{
+									"key": "endorsments",
+									"value": "<numbe>"
+								},
+								{
+									"key": "ratings",
+									"value": "<boolean>"
+								},
+								{
+									"key": "lobbying_spent",
+									"value": "<number>"
+								},
+								{
+									"key": "contributions",
+									"value": "<number>"
+								}
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain"
+						}
+					],
+					"cookie": [],
+					"body": "<string>"
+				},
+				{
+					"name": "Improper request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/sigs?limit=<integer>&sigId=<string>&topic=<string>&endorsments=<numbe>&ratings=<boolean>&lobbying_spent=<number>&contributions=<number>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"sigs"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "<integer>"
+								},
+								{
+									"key": "sigId",
+									"value": "<string>"
+								},
+								{
+									"key": "topic",
+									"value": "<string>"
+								},
+								{
+									"key": "endorsments",
+									"value": "<numbe>"
+								},
+								{
+									"key": "ratings",
+									"value": "<boolean>"
+								},
+								{
+									"key": "lobbying_spent",
+									"value": "<number>"
+								},
+								{
+									"key": "contributions",
+									"value": "<number>"
+								}
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain"
+						}
+					],
+					"cookie": [],
+					"body": "<string>"
+				},
+				{
+					"name": "Successful response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/sigs?limit=<integer>&sigId=<string>&topic=<string>&endorsments=<numbe>&ratings=<boolean>&lobbying_spent=<number>&contributions=<number>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"sigs"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "<integer>"
+								},
+								{
+									"key": "sigId",
+									"value": "<string>"
+								},
+								{
+									"key": "topic",
+									"value": "<string>"
+								},
+								{
+									"key": "endorsments",
+									"value": "<numbe>"
+								},
+								{
+									"key": "ratings",
+									"value": "<boolean>"
+								},
+								{
+									"key": "lobbying_spent",
+									"value": "<number>"
+								},
+								{
+									"key": "contributions",
+									"value": "<number>"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "[\n {\n  \"sigId\": \"<string>\",\n  \"name\": \"<string>\",\n  \"topics\": \"<string>\",\n  \"address\": \"<string>\",\n  \"description\": \"<string>\",\n  \"url\": \"<string>\",\n  \"phone1\": \"<string>\",\n  \"phone2\": \"<string>\",\n  \"email\": \"<string>\",\n  \"fax\": \"<string>\",\n  \"zip\": \"<string>\",\n  \"num_endorsments\": \"<number>\",\n  \"endorsments\": \"<array>\",\n  \"ratings\": \"<array>\",\n  \"total_contributions\": \"<number>\",\n  \"lobbying_money\": \"<number>\",\n  \"democrat_contributions\": \"<number>\",\n  \"republican_contributions\": \"<number>\"\n },\n {\n  \"sigId\": \"<string>\",\n  \"name\": \"<string>\",\n  \"topics\": \"<string>\",\n  \"address\": \"<string>\",\n  \"description\": \"<string>\",\n  \"url\": \"<string>\",\n  \"phone1\": \"<string>\",\n  \"phone2\": \"<string>\",\n  \"email\": \"<string>\",\n  \"fax\": \"<string>\",\n  \"zip\": \"<string>\",\n  \"num_endorsments\": \"<number>\",\n  \"endorsments\": \"<array>\",\n  \"ratings\": \"<array>\",\n  \"total_contributions\": \"<number>\",\n  \"lobbying_money\": \"<number>\",\n  \"democrat_contributions\": \"<number>\",\n  \"republican_contributions\": \"<number>\"\n }\n]"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "746fafba-cec7-4d0a-81a5-4f9281146c1a",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "b60e6aa1-99eb-4858-b38d-29f740147059",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "6f10bcc8-255a-49a9-a37d-0054a79e376d",
+			"key": "baseUrl",
+			"value": "https://api.policyand.me/",
+			"type": "string"
+		}
+	],
+	"protocolProfileBehavior": {}
+}

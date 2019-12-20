@@ -1,0 +1,38 @@
+#interest-groups {
+
+  .interest-group {
+    margin: 20px;
+
+    .MuiCard-root {
+      transition: .2s ease-in-out;
+      border-radius: 5px;
+      box-shadow: 0 0 10px gray;
+
+      &:hover {
+        background-color: lightgray;
+      }
+      animation-name: fade-in-down;
+      animation-duration: 0.5s;
+      animation-timing-function: ease-in-out;
+    }
+
+  }
+
+  .interest-group-grid {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .link {
+    text-decoration: none;
+  }
+}
+
+.interest-group-more-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation-name: fade-in-down;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+}

@@ -1,0 +1,1274 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components did load normally Bill loads normally 1`] = `
+<div
+  className="bill"
+>
+  <div
+    className="MuiPaper-root MuiPaper-elevation1 MuiCard-root MuiPaper-rounded"
+  >
+    <h2>
+      Bill-1
+    </h2>
+    <ul>
+      <li>
+        Introduced Date: 
+        1999
+      </li>
+      <li>
+        Primary Subject: 
+        Saftey
+      </li>
+      <li>
+        Sponsor: 
+        Joe
+      </li>
+      <li>
+        Committees: 
+        ABC
+      </li>
+    </ul>
+    
+  </div>
+</div>
+`;
+
+exports[`Components did load normally InterestGroup loads normally 1`] = `
+<div
+  className="interest-group"
+>
+  <div
+    className="MuiPaper-root MuiPaper-elevation1 MuiCard-root MuiPaper-rounded"
+  >
+    <h2>
+        
+      Test
+    </h2>
+    <ul>
+      <li>
+        Address: 
+        123 Test Ave
+      </li>
+      <li>
+        City: 
+        Somewhere
+      </li>
+      <li>
+        Phone: 
+      </li>
+      <li>
+        Email: 
+        test@google.com
+      </li>
+    </ul>
+    
+  </div>
+</div>
+`;
+
+exports[`Components did load normally Legislator loads normally 1`] = `
+<div
+  className="legislator"
+>
+  <div
+    className="MuiPaper-root MuiPaper-elevation1 MuiCard-root MuiPaper-rounded"
+  >
+    <h2
+      align="center"
+    >
+      First Last
+    </h2>
+    <div
+      align="center"
+    >
+      <img
+        alt="No picture"
+        src="https://static.votesmart.org/canphoto/undefined.jpg"
+      />
+    </div>
+    <ul>
+      <li>
+        Title: 
+        1st Class
+      </li>
+      <li>
+        Party: 
+        D
+      </li>
+      <li>
+        State: 
+        TX
+      </li>
+      <li>
+        Gender: 
+        M
+      </li>
+    </ul>
+    
+  </div>
+</div>
+`;
+
+exports[`Components did load normally NavBar loads normally 1`] = `
+<div
+  id="nav-bar"
+>
+  <div
+    className="inner-nav-bar"
+  >
+    <a
+      href="/"
+      onClick={[Function]}
+    >
+      <img
+        className="logo"
+        src="logo.png"
+      />
+    </a>
+    <ul>
+      <li>
+        <a
+          href="/about"
+          onClick={[Function]}
+        >
+          ABOUT
+        </a>
+      </li>
+      <li>
+        <a
+          href="/bills"
+          onClick={[Function]}
+        >
+          BILLS
+        </a>
+      </li>
+      <li>
+        <a
+          href="/legislators"
+          onClick={[Function]}
+        >
+          LEGISLATORS
+        </a>
+      </li>
+      <li>
+        <a
+          href="/interest-groups"
+          onClick={[Function]}
+        >
+          INTEREST GROUPS
+        </a>
+      </li>
+      <li>
+        <a
+          href="/visualizations"
+          onClick={[Function]}
+        >
+          VISUALIZATIONS
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`Components did load normally Pagination loads normally 1`] = `
+<div
+  className="pagination"
+>
+  <button
+    onClick={[Function]}
+  >
+    1
+  </button>
+  <button
+    onClick={[Function]}
+  >
+    2
+  </button>
+  <button
+    onClick={[Function]}
+  >
+    3
+  </button>
+  <button
+    onClick={[Function]}
+  >
+    4
+  </button>
+  <button
+    onClick={[Function]}
+  >
+    5
+  </button>
+  <button
+    onClick={[Function]}
+  >
+    6
+  </button>
+  <button
+    onClick={[Function]}
+  >
+    7
+  </button>
+  <button
+    onClick={[Function]}
+  >
+    8
+  </button>
+  <button
+    onClick={[Function]}
+  >
+    9
+  </button>
+  <button
+    onClick={[Function]}
+  >
+    10
+  </button>
+</div>
+`;
+
+exports[`Components did load normally Person loads normally 1`] = `
+<div
+  className="person"
+>
+  <h3 />
+  <div
+    className="headshot-wrapper"
+  >
+    <img
+      src="https://cdn130.picsart.com/305712853176201.jpg?c256x256"
+    />
+  </div>
+  <p />
+  <ul>
+    <li>
+      Responsibility: 
+    </li>
+    <li>
+      Commits: 
+    </li>
+    <li>
+      Issues: 
+    </li>
+    <li>
+      Unit tests: 
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`Search, Sort, Filter Highlight did load normally 1`] = `
+<highlightSearch
+  instance={
+    Object {
+      "last": "clinton",
+      "name": "bill",
+      "state": "TX",
+    }
+  }
+  searchValue="bill"
+/>
+`;
+
+exports[`Search, Sort, Filter Search loads normally 1`] = `
+<div
+  className="search"
+>
+  <form>
+    <div
+      className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal"
+    >
+      <label
+        className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+        data-shrink={false}
+        htmlFor="standard-basic"
+      >
+        Search
+      </label>
+      <div
+        className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+        onClick={[Function]}
+      >
+        <input
+          aria-invalid={false}
+          className="MuiInputBase-input MuiInput-input"
+          disabled={false}
+          id="standard-basic"
+          onAnimationStart={[Function]}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          required={false}
+          type="text"
+        />
+      </div>
+    </div>
+  </form>
+  <div
+    className="MuiFormControl-root sort"
+  >
+    <label
+      className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+      data-shrink={false}
+      htmlFor="age-native-simple"
+    >
+      Sort By
+    </label>
+    <div
+      className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+      onClick={[Function]}
+    >
+      <select
+        aria-invalid={false}
+        className="MuiSelect-root MuiSelect-select MuiInputBase-input MuiInput-input MuiInputBase-inputSelect"
+        disabled={false}
+        multiple={false}
+        onAnimationStart={[Function]}
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        required={false}
+        value=""
+      >
+        <option
+          value=""
+        />
+        <option
+          value="name"
+        >
+          Name
+        </option>
+      </select>
+      <svg
+        aria-hidden="true"
+        className="MuiSvgIcon-root MuiSelect-icon"
+        focusable="false"
+        role="presentation"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M7 10l5 5 5-5z"
+        />
+      </svg>
+    </div>
+  </div>
+  <br />
+  <div
+    className="MuiFormControl-root"
+  >
+    <label
+      className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+      data-shrink={false}
+      htmlFor="age-native-simple"
+    >
+      Filter By
+    </label>
+    <div
+      className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+      onClick={[Function]}
+    >
+      <select
+        aria-invalid={false}
+        className="MuiSelect-root MuiSelect-select MuiInputBase-input MuiInput-input MuiInputBase-inputSelect"
+        disabled={false}
+        multiple={false}
+        onAnimationStart={[Function]}
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        required={false}
+        value=""
+      >
+        <option
+          value=""
+        />
+        <option
+          value="state"
+        >
+          State
+        </option>
+      </select>
+      <svg
+        aria-hidden="true"
+        className="MuiSvgIcon-root MuiSelect-icon"
+        focusable="false"
+        role="presentation"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M7 10l5 5 5-5z"
+        />
+      </svg>
+    </div>
+    <div
+      className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal"
+    >
+      <label
+        className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+        data-shrink={false}
+        htmlFor="standard-basic"
+      >
+        Filter Value
+      </label>
+      <div
+        className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+        onClick={[Function]}
+      >
+        <input
+          aria-invalid={false}
+          className="MuiInputBase-input MuiInput-input"
+          disabled={false}
+          id="standard-basic"
+          onAnimationStart={[Function]}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          required={false}
+          type="text"
+        />
+      </div>
+    </div>
+  </div>
+  <br />
+  <button
+    onClick={[Function]}
+  >
+    Search
+  </button>
+</div>
+`;
+
+exports[`Search, Sort, Filter Splash did load normally 1`] = `
+<div
+  id="splash"
+>
+  <h1>
+    POLICY AND ME
+  </h1>
+  <h3>
+    Where policy and people meet
+  </h3>
+  <form>
+    <div
+      className="MuiInputBase-root MuiInput-root MuiInput-underline splash-search"
+      onClick={[Function]}
+    >
+      <input
+        aria-label="description"
+        className="MuiInputBase-input MuiInput-input"
+        onAnimationStart={[Function]}
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        placeholder="Search"
+        type="text"
+      />
+    </div>
+  </form>
+  <br />
+  <a
+    href="/search/"
+    onClick={[Function]}
+  >
+    <button>
+      Search
+    </button>
+  </a>
+</div>
+`;
+
+exports[`pages did load normally About did load normally 1`] = `
+<div
+  id="about"
+>
+  <div
+    className="members"
+  >
+    <div
+      className="person"
+    >
+      <h3>
+        Abhishek Dayal
+      </h3>
+      <div
+        className="headshot-wrapper"
+      >
+        <img
+          src="abhishek_headshot.jpg"
+        />
+      </div>
+      <p>
+        Hi, my name is Abhishek! I'm from Dallas and my favorite food is the quesarito from Taco Bell.
+      </p>
+      <ul>
+        <li>
+          Responsibility: 
+          AWS Connection, Database
+        </li>
+        <li>
+          Commits: 
+        </li>
+        <li>
+          Issues: 
+        </li>
+        <li>
+          Unit tests: 
+          10
+        </li>
+      </ul>
+    </div>
+    <div
+      className="person"
+    >
+      <h3>
+        Alec Sweet
+      </h3>
+      <div
+        className="headshot-wrapper"
+      >
+        <img
+          src="alec_headshot.png"
+        />
+      </div>
+      <p>
+        Hello! My name is Alec and I enjoy long walks on the beach.
+      </p>
+      <ul>
+        <li>
+          Responsibility: 
+          Back-End, Database
+        </li>
+        <li>
+          Commits: 
+        </li>
+        <li>
+          Issues: 
+        </li>
+        <li>
+          Unit tests: 
+          30
+        </li>
+      </ul>
+    </div>
+    <div
+      className="person"
+    >
+      <h3>
+        Atharva Pendse
+      </h3>
+      <div
+        className="headshot-wrapper"
+      >
+        <img
+          src="atharva_headshot.jpg"
+        />
+      </div>
+      <p>
+        I’m a CS junior with an interest in theory and quant finance. When I’m free I like playing pool and listening to music.
+      </p>
+      <ul>
+        <li>
+          Responsibility: 
+          AWS setup(Domain/SSL), Database
+        </li>
+        <li>
+          Commits: 
+        </li>
+        <li>
+          Issues: 
+        </li>
+        <li>
+          Unit tests: 
+          0
+        </li>
+      </ul>
+    </div>
+    <div
+      className="person"
+    >
+      <h3>
+        Joel Uong
+      </h3>
+      <div
+        className="headshot-wrapper"
+      >
+        <img
+          src="joel_headshot.PNG"
+        />
+      </div>
+      <p>
+        Hey! I'm Joel, a third year CS major, and I enjoy hiking.
+      </p>
+      <ul>
+        <li>
+          Responsibility: 
+          Front-End
+        </li>
+        <li>
+          Commits: 
+        </li>
+        <li>
+          Issues: 
+        </li>
+        <li>
+          Unit tests: 
+          0
+        </li>
+      </ul>
+    </div>
+    <div
+      className="person"
+    >
+      <h3>
+        Malcolm Hess
+      </h3>
+      <div
+        className="headshot-wrapper"
+      >
+        <img
+          src="malcolm_headshot.PNG"
+        />
+      </div>
+      <p>
+        Hello, I am a senior computer science major with an interest in front end development, and I like to go bouldering
+      </p>
+      <ul>
+        <li>
+          Responsibility: 
+          Full Stack
+        </li>
+        <li>
+          Commits: 
+        </li>
+        <li>
+          Issues: 
+        </li>
+        <li>
+          Unit tests: 
+          46
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div
+    className="info"
+  >
+    <h1>
+      Stats
+    </h1>
+    <p>
+      <b>
+        Total commits:
+      </b>
+       
+      0
+    </p>
+    <p>
+      <b>
+        Total issues:
+      </b>
+       
+      0
+    </p>
+    <p>
+      <b>
+        Total unit tests:
+      </b>
+       60
+    </p>
+    <p>
+      <a
+        href="https://documenter.getpostman.com/view/8970979/SVzua1tY"
+        target="_blank"
+      >
+        API documentation
+      </a>
+    </p>
+    <h1>
+      Tools Used
+    </h1>
+    <p>
+      <b>
+        Front End:
+      </b>
+       React, Sass
+    </p>
+    <p>
+      <b>
+        Back End:
+      </b>
+       AWS, Flask
+    </p>
+    <p>
+      <b>
+        Other:
+      </b>
+       Postman, GitLab
+    </p>
+  </div>
+</div>
+`;
+
+exports[`pages did load normally Bills did load normally 1`] = `
+<div
+  id="bills"
+>
+  <div
+    className="search"
+  >
+    <form>
+      <div
+        className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal"
+      >
+        <label
+          className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+          data-shrink={false}
+          htmlFor="standard-basic"
+        >
+          Search
+        </label>
+        <div
+          className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+          onClick={[Function]}
+        >
+          <input
+            aria-invalid={false}
+            className="MuiInputBase-input MuiInput-input"
+            disabled={false}
+            id="standard-basic"
+            onAnimationStart={[Function]}
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            required={false}
+            type="text"
+          />
+        </div>
+      </div>
+    </form>
+    <div
+      className="MuiFormControl-root sort"
+    >
+      <label
+        className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+        data-shrink={false}
+        htmlFor="age-native-simple"
+      >
+        Sort By
+      </label>
+      <div
+        className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+        onClick={[Function]}
+      >
+        <select
+          aria-invalid={false}
+          className="MuiSelect-root MuiSelect-select MuiInputBase-input MuiInput-input MuiInputBase-inputSelect"
+          disabled={false}
+          multiple={false}
+          onAnimationStart={[Function]}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          required={false}
+          value=""
+        >
+          <option
+            value=""
+          />
+          <option
+            value="short_title"
+          >
+            Title
+          </option>
+          <option
+            value="sponsor_name"
+          >
+            Sponsor Name
+          </option>
+        </select>
+        <svg
+          aria-hidden="true"
+          className="MuiSvgIcon-root MuiSelect-icon"
+          focusable="false"
+          role="presentation"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M7 10l5 5 5-5z"
+          />
+        </svg>
+      </div>
+    </div>
+    <br />
+    <div
+      className="MuiFormControl-root"
+    >
+      <label
+        className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+        data-shrink={false}
+        htmlFor="age-native-simple"
+      >
+        Filter By
+      </label>
+      <div
+        className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+        onClick={[Function]}
+      >
+        <select
+          aria-invalid={false}
+          className="MuiSelect-root MuiSelect-select MuiInputBase-input MuiInput-input MuiInputBase-inputSelect"
+          disabled={false}
+          multiple={false}
+          onAnimationStart={[Function]}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          required={false}
+          value=""
+        >
+          <option
+            value=""
+          />
+          <option
+            value="sponsor_party"
+          >
+            Sponsor Party
+          </option>
+          <option
+            value="sponsor_state"
+          >
+            Sponsor State
+          </option>
+        </select>
+        <svg
+          aria-hidden="true"
+          className="MuiSvgIcon-root MuiSelect-icon"
+          focusable="false"
+          role="presentation"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M7 10l5 5 5-5z"
+          />
+        </svg>
+      </div>
+      <div
+        className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal"
+      >
+        <label
+          className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+          data-shrink={false}
+          htmlFor="standard-basic"
+        >
+          Filter Value
+        </label>
+        <div
+          className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+          onClick={[Function]}
+        >
+          <input
+            aria-invalid={false}
+            className="MuiInputBase-input MuiInput-input"
+            disabled={false}
+            id="standard-basic"
+            onAnimationStart={[Function]}
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            required={false}
+            type="text"
+          />
+        </div>
+      </div>
+    </div>
+    <br />
+    <button
+      onClick={[Function]}
+    >
+      Search
+    </button>
+  </div>
+  <div
+    className="pagination"
+  />
+  <div
+    className="bill-grid"
+  />
+  <div
+    className="pagination"
+  />
+</div>
+`;
+
+exports[`pages did load normally InterestGroups did load normally 1`] = `
+<div
+  id="interest-groups"
+>
+  <div
+    className="search"
+  >
+    <form>
+      <div
+        className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal"
+      >
+        <label
+          className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+          data-shrink={false}
+          htmlFor="standard-basic"
+        >
+          Search
+        </label>
+        <div
+          className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+          onClick={[Function]}
+        >
+          <input
+            aria-invalid={false}
+            className="MuiInputBase-input MuiInput-input"
+            disabled={false}
+            id="standard-basic"
+            onAnimationStart={[Function]}
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            required={false}
+            type="text"
+          />
+        </div>
+      </div>
+    </form>
+    <div
+      className="MuiFormControl-root sort"
+    >
+      <label
+        className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+        data-shrink={false}
+        htmlFor="age-native-simple"
+      >
+        Sort By
+      </label>
+      <div
+        className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+        onClick={[Function]}
+      >
+        <select
+          aria-invalid={false}
+          className="MuiSelect-root MuiSelect-select MuiInputBase-input MuiInput-input MuiInputBase-inputSelect"
+          disabled={false}
+          multiple={false}
+          onAnimationStart={[Function]}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          required={false}
+          value=""
+        >
+          <option
+            value=""
+          />
+          <option
+            value="name"
+          >
+            Name
+          </option>
+        </select>
+        <svg
+          aria-hidden="true"
+          className="MuiSvgIcon-root MuiSelect-icon"
+          focusable="false"
+          role="presentation"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M7 10l5 5 5-5z"
+          />
+        </svg>
+      </div>
+    </div>
+    <br />
+    <div
+      className="MuiFormControl-root"
+    >
+      <label
+        className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+        data-shrink={false}
+        htmlFor="age-native-simple"
+      >
+        Filter By
+      </label>
+      <div
+        className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+        onClick={[Function]}
+      >
+        <select
+          aria-invalid={false}
+          className="MuiSelect-root MuiSelect-select MuiInputBase-input MuiInput-input MuiInputBase-inputSelect"
+          disabled={false}
+          multiple={false}
+          onAnimationStart={[Function]}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          required={false}
+          value=""
+        >
+          <option
+            value=""
+          />
+          <option
+            value="state"
+          >
+            State
+          </option>
+        </select>
+        <svg
+          aria-hidden="true"
+          className="MuiSvgIcon-root MuiSelect-icon"
+          focusable="false"
+          role="presentation"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M7 10l5 5 5-5z"
+          />
+        </svg>
+      </div>
+      <div
+        className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal"
+      >
+        <label
+          className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+          data-shrink={false}
+          htmlFor="standard-basic"
+        >
+          Filter Value
+        </label>
+        <div
+          className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+          onClick={[Function]}
+        >
+          <input
+            aria-invalid={false}
+            className="MuiInputBase-input MuiInput-input"
+            disabled={false}
+            id="standard-basic"
+            onAnimationStart={[Function]}
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            required={false}
+            type="text"
+          />
+        </div>
+      </div>
+    </div>
+    <br />
+    <button
+      onClick={[Function]}
+    >
+      Search
+    </button>
+  </div>
+  <div
+    className="pagination"
+  />
+  <div
+    className="interest-groups-grid"
+  />
+  <div
+    className="pagination"
+  />
+</div>
+`;
+
+exports[`pages did load normally Legislators did load normally 1`] = `
+<div
+  id="legislators"
+>
+  <div
+    className="search"
+  >
+    <form>
+      <div
+        className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal"
+      >
+        <label
+          className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+          data-shrink={false}
+          htmlFor="standard-basic"
+        >
+          Search
+        </label>
+        <div
+          className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+          onClick={[Function]}
+        >
+          <input
+            aria-invalid={false}
+            className="MuiInputBase-input MuiInput-input"
+            disabled={false}
+            id="standard-basic"
+            onAnimationStart={[Function]}
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            required={false}
+            type="text"
+          />
+        </div>
+      </div>
+    </form>
+    <div
+      className="MuiFormControl-root sort"
+    >
+      <label
+        className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+        data-shrink={false}
+        htmlFor="age-native-simple"
+      >
+        Sort By
+      </label>
+      <div
+        className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+        onClick={[Function]}
+      >
+        <select
+          aria-invalid={false}
+          className="MuiSelect-root MuiSelect-select MuiInputBase-input MuiInput-input MuiInputBase-inputSelect"
+          disabled={false}
+          multiple={false}
+          onAnimationStart={[Function]}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          required={false}
+          value=""
+        >
+          <option
+            value=""
+          />
+          <option
+            value="first_name"
+          >
+            First Name
+          </option>
+          <option
+            value="last_name"
+          >
+            Last Name
+          </option>
+        </select>
+        <svg
+          aria-hidden="true"
+          className="MuiSvgIcon-root MuiSelect-icon"
+          focusable="false"
+          role="presentation"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M7 10l5 5 5-5z"
+          />
+        </svg>
+      </div>
+    </div>
+    <br />
+    <div
+      className="MuiFormControl-root"
+    >
+      <label
+        className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+        data-shrink={false}
+        htmlFor="age-native-simple"
+      >
+        Filter By
+      </label>
+      <div
+        className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+        onClick={[Function]}
+      >
+        <select
+          aria-invalid={false}
+          className="MuiSelect-root MuiSelect-select MuiInputBase-input MuiInput-input MuiInputBase-inputSelect"
+          disabled={false}
+          multiple={false}
+          onAnimationStart={[Function]}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          required={false}
+          value=""
+        >
+          <option
+            value=""
+          />
+          <option
+            value="party"
+          >
+            Party
+          </option>
+          <option
+            value="state"
+          >
+            State
+          </option>
+        </select>
+        <svg
+          aria-hidden="true"
+          className="MuiSvgIcon-root MuiSelect-icon"
+          focusable="false"
+          role="presentation"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M7 10l5 5 5-5z"
+          />
+        </svg>
+      </div>
+      <div
+        className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal"
+      >
+        <label
+          className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+          data-shrink={false}
+          htmlFor="standard-basic"
+        >
+          Filter Value
+        </label>
+        <div
+          className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+          onClick={[Function]}
+        >
+          <input
+            aria-invalid={false}
+            className="MuiInputBase-input MuiInput-input"
+            disabled={false}
+            id="standard-basic"
+            onAnimationStart={[Function]}
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            required={false}
+            type="text"
+          />
+        </div>
+      </div>
+    </div>
+    <br />
+    <button
+      onClick={[Function]}
+    >
+      Search
+    </button>
+  </div>
+  <div
+    className="pagination"
+  />
+  <div
+    className="legislator-grid"
+  />
+  <div
+    className="pagination"
+  />
+</div>
+`;

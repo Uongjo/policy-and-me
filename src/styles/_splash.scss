@@ -1,0 +1,117 @@
+#splash {
+  
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  position: fixed;
+
+  * {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .splash-search {
+    margin-top: 30px;
+  }
+
+  h1 {
+    font-size: 72px;
+    letter-spacing: 2px;
+    font-family: $header-font;
+    font-weight: normal;
+    animation-name: fade-in-down;
+    animation-delay: 1s;
+  }
+
+  h3 {
+    font-family: $body-font;
+    font-weight: lighter;
+    animation-name: fade-in-up;
+    animation-delay: 2.5s;
+  }
+  
+  h1, h3 {
+    color: black;
+    position: relative;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1.5s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+  }
+
+  .splash-search {
+    font-family: $body-font;
+  }
+
+  .splash-form {
+    position: relative;
+    width: fit-content;
+    margin: auto;
+
+    .splash-search-bar {
+      font-family: $body-font;
+      color: dodgerblue;
+      padding: 20px;
+      background-color: rgba(lightgray, .55);
+      border-radius: 15px;
+      border: 1px solid white;
+      &:focus {
+        outline: none;
+      }
+    }
+
+    span {
+      cursor: pointer;
+      color: dodgerblue;
+      position: absolute;
+      transition: .1s linear;
+      font-size: 20px;
+      transform: translateX(50%) translateY(50%);
+      margin-left: -45px;
+
+      &:hover {
+        font-size: 28px;
+        margin-top: -11px;
+        margin-left: -54px;
+      }
+    }
+  }
+
+  .call-to-action {
+    opacity: 0;
+    margin-top: 35px;
+    animation-name: fade-in;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 4s;
+  }
+
+  text-align: center;
+
+  height: 100vh;
+  background-image: url('https://i.imgur.com/baVZRxO.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  .content {
+    animation-name: fade-in;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    
+    width: fit-content;
+    height: fit-content;
+    border-radius: 5px;
+    margin-top: 50px;
+    padding: 50px;
+    background-color: rgba(white, .9);
+    box-shadow: 0 0 10px gray;
+  }
+
+  button {
+    padding: 10px;
+  }
+}

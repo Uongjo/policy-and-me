@@ -1,0 +1,348 @@
+openapi: 3.0.0
+info:
+    version: '1.0.0'
+    title: 'Policy and Me REST API'
+    description: 'An API that allows users to query policy data, created by SWE team 20'
+
+baseUrl: https://www.policyand.me
+
+paths:
+    /bills:
+        get:
+            operationId: getBills
+            description: Obtain information about Bills from database with optional queries
+            parameters:
+                -   name: limit
+                    in: query
+                    description: Number of bills returned
+                    schema:
+                        type: integer
+                        minimum: 1
+                        maximum: 100
+                        example: 50
+                -   name: id
+                    in: query
+                    required: false
+                    description: Bill info by unique id
+                    schema:
+                        type: string
+                -   name: sponsor
+                    in: query
+                    required: false
+                    description: Number of bills returned
+                    schema:
+                        type: string
+                -   name: sponsor_party
+                    in: query
+                    required: false
+                    description: Bills by sponsors party
+                    schema:
+                        type: string
+                -   name: introduced
+                    in: query
+                    required: false
+                    description: Bills by date introduced
+                    schema:
+                        type: string
+                -   name: subject
+                    in: query
+                    required: false
+                    description: Bills by primary subject matter
+                    schema:
+                        type: string
+            responses:
+                '200':
+                    description: Successful response
+                    content:
+                        application/json:
+                            schema:
+                                title: Bills found
+                                type: array
+                                items:
+                                    $ref: '#/components/schema/Bill'
+                '400':
+                    description: Improper request
+                    content:
+                        text/plain:
+                            schema:
+                                title: Request improperly formatted
+                                type: string
+                '404':
+                    description: Response for not found
+                    content:
+                        text/plain:
+                            schema:
+                                title: Bills not found
+                                type: string
+    /legislators:
+        get:
+            description: Obtain information about legislators from database with optional queries
+            operationId: getLegislators
+            parameters:
+                -   name: limit
+                    in: query
+                    required: false
+                    description: Number of legislators returned
+                    schema:
+                        type: integer
+                        minimum: 1
+                        maximum: 100
+                        example: 50
+                -   name: state
+                    in: query
+                    required: false
+                    description: Legislator State
+                    schema:
+                        type: string
+                -   name: name
+                    in: query
+                    required: false
+                    description: Legislator info by name
+                    schema:
+                        type: string
+                -   name: district
+                    in: query
+                    required: false
+                    description: Legislator info by district
+                    schema:
+                        type: string
+                -   name: house
+                    in: query
+                    required: false
+                    description: Legislator info by house in congress
+                    schema:
+                        type: string
+                -   name: party
+                    in: query
+                    required: false
+                    description: Legislator info by political party
+                    schema:
+                        type: string
+            responses:
+                '200':
+                    description: Successful response
+                    content:
+                        application/json:
+                            schema:
+                                title: Legislators found
+                                type: array
+                                items:
+                                    $ref: '#/components/schema/Legislator'
+                '400':
+                    description: Improper request
+                    content:
+                        text/plain:
+                            schema:
+                                title: Request improperly formatted
+                                type: string
+                '404':
+                    description: Response for not found
+                    content:
+                        text/plain:
+                            schema:
+                                title: Legislator not found
+                                type: string
+    /interestgroups:
+        get:
+            description: Obtain information about interest groups from database with optional queries
+            operationId: getInterestGroups
+            parameters:
+                -   name: limit
+                    in: query
+                    description: Number of interest groups returned
+                    schema:
+                        type: integer
+                        minimum: 1
+                        maximum: 100
+                        example: 50
+                -   name: name
+                    in: query
+                    required: false
+                    description: Interest group info by name
+                    schema:
+                        type: string
+                -   name: topic
+                    in: query
+                    required: false
+                    description: Interest group info by topic concerned
+                    schema:
+                        type: string        
+                -   name: endorsments
+                    in: query
+                    required: false
+                    description: Interest group info by number of endorsments made
+                    schema:
+                        type: numbe        
+                -   name: ratings
+                    in: query
+                    required: false
+                    description: Interest group info by if ratings are available
+                    schema:
+                        type: boolean
+                -   name: lobbying_spent
+                    in: query
+                    required: false
+                    description: Interest group info by those who spent more on lobbying than query
+                    schema:
+                        type: number
+                -   name: contributions
+                    in: query
+                    required: false
+                    description: Interest group info by those who made more contributions than query
+                    schema:
+                        type: number  
+            responses:
+                '200':
+                    description: Successful response
+                    content:
+                        application/json:
+                            schema:
+                                title: Interest Groups found
+                                type: array
+                                items:
+                                    $ref: '#/components/schema/InterestGroup'
+                '400':
+                    description: Improper request
+                    content:
+                        text/plain:
+                            schema:
+                                title: Request improperly formatted
+                                type: string
+                '404':
+                    description: Response for not found
+                    content:
+                        text/plain:
+                            schema:
+                                title: Interest Group not found
+                                type: string
+components:
+    schema:
+        Bill:
+            title: Bill
+            type: object
+            properties:
+                id:
+                    type: string
+                    description: Unique identifier given to a bill.
+                title:
+                    type: string
+                    description: Title of the bill.
+                topic:
+                    type: string
+                    description: Topic of the bill.
+                summary:
+                    type: string
+                    description: Summary of the bill.
+                status:
+                    type: string
+                    description: Current status of the bill.
+                sponsor:
+                    type: string
+                    description: Name of the bills sponsor.
+                sponsor_party:
+                    type: string
+                    description: Name of the sponsors party.
+                introduced:
+                    type: string
+                    description: Date the bill was introduces.
+                subject:
+                    type: string
+                    description: Primary subject of the bill.
+                committees:
+                    type: string
+                    description: Committees the bill was considered by.
+                latest_action:
+                    type: string
+                    description: Latest action occuring to the bill.
+        Legislator:
+            title: Legislator
+            type: object
+            properties:
+                name:
+                    type: string
+                    description: Legislator's full name.
+                party:
+                    type: string
+                    description: Legislators Party.
+                state:
+                    type: string
+                    description: State a legislator represents.
+                district:
+                    type: number
+                    description: District a legislator represents.
+                bills_sponsored:
+                    type: number
+                    description: Number of bills a legislator directly sponsored.
+                bills_cosponsored:
+                    type: number
+                    description: Number of bills a legislator cosponsored.
+                picture:
+                    type: string
+                    description: Picture Url of the legislator.
+                committees:
+                    type: string
+                    description: Committees a legislator is on.
+                house:
+                    type: string
+                    description: Legislator's house in congress.
+                gender:
+                    type: string
+                    description: Legislator's gender.
+                twitter:
+                    type: string
+                    description: Url to Legislator's Twitter.
+                facebook:
+                    type: string
+                    description: Url to Legislator's Facebook.
+                youtube:
+                    type: string
+                    description: Url to Legislator's Youtube.
+        InterestGroup:
+            title: InterestGroup
+            type: object
+            properties:
+                name:
+                    type: string
+                    description: Name of the interest group.
+                topics:
+                    type: string
+                    description: Topics the group is concerned with.
+                description:
+                    type: string
+                    description: Description of the interest group.
+                website:
+                    type: string
+                    description: Url of the groups website.
+                phone:
+                    type: string
+                    description: Phone number of the group.
+                phone2:
+                    type: string
+                    description: Secondary phone if existing.
+                address:
+                    type: string
+                    description: Address if applicable.
+                email:
+                    type: string
+                    description: Email if applicable.
+                num_endorsments:
+                    type: number
+                    description: Number of endorsments made to now sitting Legislators
+                endorsments:
+                    type: array
+                    description: Endorsments the group has made.
+                ratings:
+                    type: array
+                    description: Ratings the group has given legislators if applicable.
+                total_contributions:
+                    type: number
+                    description: Total contributions made to politicians.
+                lobbying_money:
+                    type: number
+                    description: Total money spent lobbying by the group.
+                democrat_contributions:
+                    type: number
+                    description: Total contributions made to Democrats.
+                republican_contributions:
+                    type: number
+                    description: Total contributions made to Republicans.

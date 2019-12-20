@@ -1,0 +1,22 @@
+frontendtest:
+  image: node:10
+  type: test
+  script:
+    - npm install
+    - npm test
+
+backendtest:
+  image: python:3.7
+  type: test
+  script:
+    - cd backend
+    - pip install -r requirements.txt
+    - python TestBackend.py
+
+postmantest:
+  image:
+    name: postman/newman_alpine33
+    entrypoint: [""]
+  type: test
+  script:
+    - newman run Postman.json

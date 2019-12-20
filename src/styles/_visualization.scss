@@ -1,0 +1,158 @@
+.visualization {
+
+  width: fit-content;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation-name: fade-in-down;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+
+  h1 {
+    font-family: $body-font;
+    font-weight: lighter;
+  }
+  
+  .visualization-bar-chart {
+    font-family: "Arial", sans-serif;
+    
+    .bar {
+        fill: #5f89ad;
+    }
+    
+    .axis {
+        font-size: 13px;
+    }
+    
+    .axis path,
+    .axis line {
+        fill: none;
+        display: none;
+    }
+    
+    .label {
+        font-size: 13px;
+    }
+  }
+
+  .visualization-heat-map {
+    font-size: 62.5%;  
+    margin-top: 30px;
+    font-size: 1.4rem;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    fill: #696969;
+    text-align: center;
+    
+    .timeLabel, .dayLabel {
+		    font-size: 1.6rem;
+		    fill: #AAAAAA;
+		    font-weight: 300;
+		}
+
+    #nav-container {
+      display: flex;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    #nav-container .left {
+      margin-right: 20px;
+    }
+
+    #nav-container .right {
+      margin-left: 20px;
+    }
+  }
+
+  .visualization-map {
+    .state{
+      fill: none;
+      stroke: #a9a9a9;
+      stroke-width: 1;
+    }
+    .state:hover{
+      fill-opacity:0.5;
+    }
+    #tooltip {   
+      position: absolute;           
+      text-align: center;
+      padding: 20px;             
+      margin: 10px;
+      font: 12px sans-serif;        
+      background: lightsteelblue;   
+      border: 1px;      
+      border-radius: 2px;           
+      pointer-events: none;         
+    }
+    #tooltip h4{
+      margin:0;
+      font-size:14px;
+    }
+    #tooltip{
+      background:rgba(0,0,0,0.9);
+      border:1px solid grey;
+      border-radius:5px;
+      font-size:12px;
+      width:auto;
+      padding:4px;
+      color:white;
+      opacity:0;
+    }
+    #tooltip table{
+      table-layout:fixed;
+    }
+    #tooltip tr td{
+      padding:0;
+      margin:0;
+    }
+    #tooltip tr td:nth-child(1){
+      width:50px;
+    }
+    #tooltip tr td:nth-child(2){
+      text-align:center;
+    }
+  }
+
+  .visualization-bubble-chart {
+    svg {
+      margin: -130px 0px;
+    }
+  }
+
+  .doctor-city-rating {
+    font-family: "Arial", sans-serif;
+
+    .bar {
+        fill: #228B22;
+    }
+
+    .axis {
+        font-size: 13px;
+    }
+  }
+
+  .doctor-visualization-bar-chart {
+    font-family: "Arial", sans-serif;
+    
+    .bar {
+        fill: #c3fdc3;
+    }
+    
+    .axis {
+        font-size: 13px;
+    }
+    
+    .axis path,
+    .axis line {
+        fill: none;
+        display: none;
+    }
+
+    
+    .label {
+        font-size: 13px;
+    }
+  }
+}

@@ -1,0 +1,48 @@
+#nav-bar {
+
+  width: 100%;
+  position: sticky;
+  top: 0px;
+  z-index: 5;
+  padding: 5px 0px;
+  background-color: rgba($primary-color, .75);
+
+  .inner-nav-bar {
+    margin: auto;
+    overflow: auto;
+    position: relative;
+    margin-top: 4px;
+    width: 97%;
+
+    .logo {
+      height: 40px;
+      margin: 0px;
+      margin-left: 20px;
+    }
+
+    ul {
+      position: relative;
+      float: right;
+      display: flex;
+      list-style-type: none;
+      margin: 0px;
+      padding: 0px;
+
+    }
+
+    li {
+      margin: 10px 20px;
+
+      a {
+        color: white; // Change later
+        transition: .25s ease-in-out;
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: dodgerblue; // Change later
+      }
+    }
+  }
+
+}

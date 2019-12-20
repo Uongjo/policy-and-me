@@ -1,0 +1,104 @@
+@import '_variables';
+@import '_splash';
+@import '_navbar';
+@import '_about';
+@import '_person';
+@import '_legislators';
+@import '_bills';
+@import '_interest-groups';
+@import '_pagination';
+@import '_search';
+@import '_visualization';
+@import '_animations';
+
+#app {
+  position: relative;
+}
+
+.MuiCard-root {
+  transition: .25s ease-in-out;
+}
+
+a {
+  color: rgba(dodgerblue, .9);
+  transition: .2s ease-in-out;
+  text-decoration: none;
+
+  &:hover {
+    color: red;
+  }
+}
+
+h1, h2, h3 {
+  font-family: $body-font;
+}
+
+.container {
+  margin: auto;
+  // max-width: 1200px;
+}
+
+.interest-group-more-info, // Change later
+.legislator-more-info,
+.bill-more-info {
+  padding: 50px;
+  padding-top: 0px;
+}
+
+button { // Change later
+  background-color: #000080;
+  color: white;
+  border-style: none;
+  padding: 10px;
+  border-radius: 2px;
+  transition: .2s ease-in-out;
+  font-family: $body-font;
+
+  &:hover {
+    background-color: dodgerblue;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+
+.table {
+  text-align: center;
+
+  tr:nth-child(odd) {
+    background-color: rgba($primary-color, .75);
+    color: white;
+  }
+
+  tr:nth-child(even) {
+    background-color: rgba($neutral-color, 0.3);
+  }
+
+  td {
+    padding: 20px;
+    width: 350px;
+  }
+
+  // td:nth-child(1) {
+  //   font-weight: bold;
+  // }
+}
+
+.connections {
+  text-align: center;
+  max-height: 300px;
+  overflow-y: auto;
+  width: 90%;
+  margin-bottom: 20px;
+}
+
+.loading-gif-container {
+  display: flex;
+  justify-content: center;
+}
+
+body {
+  background-color: $bg-color;
+}
